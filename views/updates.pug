@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title= title
+  body
+    h1= title
+
+    form(action='/update-cobj', method='POST')
+      label(for='name') Name:
+      input(type='text', name='name', required)
+      br
+
+      label(for='description') Description:
+      input(type='text', name='description', required)
+      br
+
+      label(for='type') Type:
+      select(name='type', required)
+        option(value='ltd') LTD
+        option(value='llc') LLC
+
+      button(type='submit') Submit
+
+    br
+    a(href='/') Return to the homepage
